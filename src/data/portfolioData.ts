@@ -144,7 +144,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 20,
-    title: "Podcast",
+    title: "Restaurant",
     category: "Logo",
     imageUrl: th19Img,
     description: "Illustrated cover art for an indie game."
