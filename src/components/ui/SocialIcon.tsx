@@ -1,10 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Instagram, MessageCircle, MailIcon } from 'lucide-react'
+import { Instagram } from 'lucide-react'
 import { FaDiscord } from "react-icons/fa";
 import { clsx } from 'clsx'
-// import Instagram from '@/components/ui/Instagram'
-import { FaMailBulk } from "react-icons/fa";
 import { SiGmail } from 'react-icons/si';
 
 type SocialType = 'email' | 'instagram' | 'discord'

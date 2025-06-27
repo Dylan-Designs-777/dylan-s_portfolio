@@ -1,4 +1,4 @@
-import { th1Img, th2Img, th3Img, th4Img, th5Img, th6Img, th7Img, th8Img, th9Img, th10Img, th11Img, th12Img, th13Img, th14Img, th15Img, th16Img, th17Img, th18Img, th19Img, th20Img } from "../utils";
+import { th1Img, th3Img, th4Img, th5Img, th6Img, th7Img, th8Img, th9Img, th10Img, th11Img, th12Img, th13Img, th14Img, th15Img, th16Img, th17Img, th18Img, th19Img } from "../utils";
 
 export interface PortfolioItem {
   id: number
