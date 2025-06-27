@@ -1,0 +1,90 @@
+:root {
+  --background: #1A1A1A;
+  --primary: #8A2BE2;
+  --secondary: #B19CD9;
+  --accent: #4B0082;
+  --gray-dark: #2D2D2D;
+  --gray-light: #AAAAAA;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Custom selection */
+::selection {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+}
+
+/* Custom utility classes */
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-montserrat mb-6;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-white to-secondary bg-clip-text text-transparent;
+  }
+}
