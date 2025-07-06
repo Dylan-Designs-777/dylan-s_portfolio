@@ -1,4 +1,4 @@
-import { th1Img, th3Img, th4Img, th5Img, th6Img, th7Img, th8Img, th9Img, th10Img, th11Img, th12Img, th13Img, th14Img, th15Img, th16Img, th17Img, th18Img, th19Img } from "../utils";
+import { th1Img, th3Img, th4Img, th5Img, th6Img, th7Img, th8Img, th9Img, th10Img, th11Img, th12Img, th13Img, th14Img, th15Img, th16Img, th17Img, th18Img, th19Img, th21Img, th22Img, th23Img } from "../utils";
 
 export interface PortfolioItem {
   id: number
@@ -130,23 +130,37 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 18,
-    title: "",
-    category: false,
-    imageUrl: "",
+    title: "Football",
+    category: "Thumbnails",
+    imageUrl: th21Img,
     description: "Illustrated cover art for an indie game."
   },
   {
     id: 19,
-    title: "",
-    category: false,
-    imageUrl: "",
+    title: "Plane Crash",
+    category: "Thumbnails",
+    imageUrl: th23Img,
     description: "Illustrated cover art for an indie game."
   },
+  // {
+  //   id: 19,
+  //   title: "",
+  //   category: false,
+  //   imageUrl: "",
+  //   description: "Illustrated cover art for an indie game."
+  // },
   {
     id: 20,
     title: "Restaurant",
     category: "Logo",
     imageUrl: th19Img,
+    description: "Illustrated cover art for an indie game."
+  },
+  {
+    id: 21,
+    title: "Free Fire",
+    category: "Thumbnails",
+    imageUrl: th22Img,
     description: "Illustrated cover art for an indie game."
   }
 ]

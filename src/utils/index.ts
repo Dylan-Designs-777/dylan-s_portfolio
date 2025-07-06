@@ -18,6 +18,9 @@ import th17 from "/assets/img/17.png";
 import th18 from "/assets/img/18.png";
 import th19 from "/assets/img/19.png";
 import th20 from "/assets/img/20.png";
+import th21 from "/assets/img/21.png";
+import th22 from "/assets/img/22.png";
+import th23 from "/assets/img/23.png";
 
 export const th1Img = th1;
 export const th2Img = th2;
@@ -39,3 +42,6 @@ export const th17Img = th17;
 export const th18Img = th18;
 export const th19Img = th19;
 export const th20Img = th20;
+export const th21Img = th21;
+export const th22Img = th22;
+export const th23Img = th23;
