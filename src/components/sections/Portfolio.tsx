@@ -9,9 +9,9 @@ const Portfolio: React.FC = () => {
   const categories = Array.from(
     new Set(
       portfolioItems.map((item) =>
-        item.category !== false ? item.category : "Empty"
-      )
-    )
+        item.category !== false ? item.category : "Empty",
+      ),
+    ),
   );
 
   const filteredItems = selectedCategory
@@ -78,7 +78,7 @@ const Portfolio: React.FC = () => {
             ))}
         </motion.div>
 
-        <Masonry
+        {/* <Masonry
           breakpointCols={breakpointColumnsObj}
           className="flex w-auto -ml-4"
           columnClassName="pl-4 bg-clip-padding"
@@ -109,7 +109,40 @@ const Portfolio: React.FC = () => {
               </div>
             </motion.div>
           ))}
-        </Masonry>
+        </Masonry> */}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filteredItems.map((item, index) => (
+            <motion.div
+              key={item.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className={
+                item.aspect === "portrait"
+                  ? "row-span-2"
+                  : "row-span-1"
+              }
+            >
+              <div className="group relative overflow-hidden rounded-lg">
+                <img
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className="w-full h-auto object-cover transform transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                  <h3 className="text-xl font-bold font-montserrat text-white mb-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-light font-poppins">
+                    {item.category}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
